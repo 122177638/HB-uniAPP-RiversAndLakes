@@ -1,0 +1,64 @@
+<import src="/components/loading.vue.wxml" />
+<template name="0112c654">
+  <view class="_view data-v-2e4d3726 content">
+    <view class="_view data-v-2e4d3726 search_dom">
+      <view class="_view data-v-2e4d3726 search_l">
+        <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4264132728,3442146706&fm=27&gp=0.jpg" class="_image data-v-2e4d3726 search_logo" mode></image>
+        <view class="_view data-v-2e4d3726 search_name">壹心理测评</view>
+      </view>
+      <view class="_view data-v-2e4d3726 search_r">
+        <image src="../../static/images/search.png" class="_image data-v-2e4d3726 search_icon" mode></image>
+        <input type="text" class="_input data-v-2e4d3726 search_ipt" value="" placeholder="搜索" />
+      </view>
+    </view>
+    <view class="_view data-v-2e4d3726 category_container">
+      <view class="_view data-v-2e4d3726 category">
+        <view wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{categoryType}}" wx:for-index="index" wx:for-item="item" class="_view data-v-2e4d3726 {{['category_type', onCategoryType == index ? 'on' : '']}}">
+        {{item}} </view>
+      </view>
+      <view class="_view data-v-2e4d3726 category_content">
+        <view class="_view data-v-2e4d3726 category_sort_wrap">
+          <view class="_view data-v-2e4d3726">排序</view>
+          <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_view data-v-2e4d3726 {{['sort_type', [sortTypeShow ? 'on' : '']]}}"> {{sortType[selectSortType]}} </view>
+          <view class="_view data-v-2e4d3726 {{['sort_type_wrap', [sortTypeShow ? 'on' : '']]}}">
+            <view class="_view data-v-2e4d3726 sort_type_item" bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{sortType}}" wx:for-index="index" wx:for-item="item">
+              <view class="_view data-v-2e4d3726 {{selectSortType == index ? 'on' : ''}}">{{item}}</view>
+            </view>
+          </view>
+        </view>
+        <scroll-view class="_scroll-view data-v-2e4d3726 category_list_wrap" scroll-y scroll-with-animation enable-back-to-top bindscrolltolower="handleProxy" wx:if="{{categoryData != ''}}" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-2e4d3726 category_list">
+            <view class="_view data-v-2e4d3726 category_item" wx:key="item.cid" key="{{item.cid}}" wx:for="{{categoryData}}" wx:for-index="index" wx:for-item="item">
+              <view class="_view data-v-2e4d3726 item_l">
+                <view class="_view data-v-2e4d3726 obox">
+                  <view class="_view data-v-2e4d3726 item_title ellipsis">{{item.name}}</view>
+                  <view class="_view data-v-2e4d3726 item_describe ellipsis">{{item.describe}}</view>
+                </view>
+                <view class="_view data-v-2e4d3726 item_bz">
+                  <view class="_view data-v-2e4d3726">
+                    <text class="_text data-v-2e4d3726 Mcolor">￥{{item.money}}</text>
+                    <text class="_text data-v-2e4d3726">￥{{item.oldmoney}}}</text>
+                  </view>
+                  <view class="_view data-v-2e4d3726">
+                    <text class="_text data-v-2e4d3726">{{item.count}}人已测</text>
+                  </view>
+                </view>
+              </view>
+              <view class="_view data-v-2e4d3726 item_r">
+                <image src="{{item.headimg}}" class="_image data-v-2e4d3726 item_img" mode="aspectFill"></image>
+                <text class="_text data-v-2e4d3726 itype">{{item.type}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="_view data-v-2e4d3726 loadpromt" wx:if="{{loadpromtShow}}">
+            <view class="_view data-v-2e4d3726 loadcover">
+              <view class="_view data-v-2e4d3726 cloud"></view>
+            </view>
+            <view class="_view data-v-2e4d3726">{{loadpromt}}</view>
+          </view>
+        </scroll-view>
+        <template wx:else data="{{...$root[$kk+'0'], $root}}" is="cc60cd54"></template>
+      </view>
+    </view>
+  </view>
+</template>

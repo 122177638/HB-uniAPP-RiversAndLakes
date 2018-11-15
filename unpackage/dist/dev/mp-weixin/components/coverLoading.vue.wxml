@@ -1,0 +1,39 @@
+<template name="56a71f5b">
+  <view class="_view data-v-2ee106c0 circle-loader-container">
+    <view class="_view data-v-2ee106c0 loader">
+      <view class="_view data-v-2ee106c0 text">Loading...</view>
+      <view class="_view data-v-2ee106c0 horizontal">
+        <view class="_view data-v-2ee106c0 circlesup">
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+        </view>
+        <view class="_view data-v-2ee106c0 circlesdwn">
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+        </view>
+      </view>
+      <view class="_view data-v-2ee106c0 vertical">
+        <view class="_view data-v-2ee106c0 circlesup">
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+        </view>
+        <view class="_view data-v-2ee106c0 circlesdwn">
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+          <view class="_view data-v-2ee106c0 circle"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

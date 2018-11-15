@@ -1,0 +1,29 @@
+<template name="0e4e4458">
+  <view class="_view data-v-4756c234 content">
+    <view class="_view data-v-4756c234 mytest_top">
+      <view class="_view data-v-4756c234 top_content">
+        <view class="_view data-v-4756c234 head_wrap">
+          <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=231878074,3728399985&fm=27&gp=0.jpg" class="_image data-v-4756c234 head_img" mode="aspectFill"></image>
+        </view>
+        <view class="_view data-v-4756c234 place">欢迎回来，Anles!</view>
+      </view>
+    </view>
+    <view class="_view data-v-4756c234 test_history_container">
+      <view class="_view data-v-4756c234 test_history_tabbar">
+        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_view data-v-4756c234 {{['history_tabbar_item', [tabbarCurrent == 0 ? 'on' : '']]}}">未完成</view>
+        <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_view data-v-4756c234 {{['history_tabbar_item', [tabbarCurrent == 1 ? 'on' : '']]}}">已完成</view>
+        <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_view data-v-4756c234 {{['history_tabbar_item', [tabbarCurrent == 2 ? 'on' : '']]}}">全部测评</view>
+      </view>
+      <view class="_view data-v-4756c234 test_history_content">
+        <view class="_view data-v-4756c234 null_container">
+          <view class="_view data-v-4756c234 null_toast">
+            <image src="../../static/images/null.png" class="_image data-v-4756c234 null_img" mode></image>
+            <view class="_view data-v-4756c234 null_promt">暂无测评</view>
+          </view>
+          <view class="_view data-v-4756c234 null_btn" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">查看更多精彩测评</view>
+          <view class="_view data-v-4756c234 null_txt">壹心理@提供内容及技术支持</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

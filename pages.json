@@ -1,0 +1,60 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类"
+			}
+		},
+		{
+			"path": "pages/mytest/mytest",
+			"style": {
+				"navigationBarTitleText": "我的测评"
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#333333",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"position": "bottom",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/images/home_Unselected.png",
+				"selectedIconPath": "static/images/home_selected.png"
+			},{
+				"pagePath": "pages/category/category",
+				"text": "分类",
+				"iconPath": "static/images/filter_Unselected.png",
+				"selectedIconPath": "static/images/filter_selected.png"
+			},
+			{
+				"pagePath": "pages/mytest/mytest",
+				"text": "我的测评",
+				"iconPath": "static/images/me_Unselected.png",
+				"selectedIconPath": "static/images/me__selected.png"
+			}
+		]
+	}
+}

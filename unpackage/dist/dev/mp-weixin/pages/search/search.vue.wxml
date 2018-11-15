@@ -1,0 +1,100 @@
+<template name="6f6e1ad8">
+  <view class="_view data-v-a87698b4 content">
+    <view class="_view data-v-a87698b4 search_container">
+      <view class="_view data-v-a87698b4 search_wrap">
+        <view class="_view data-v-a87698b4 search_import">
+          <image src="../../static/images/search.png" class="_image data-v-a87698b4 search_icon" mode></image>
+          <input type="text" class="_input data-v-a87698b4 search_ipt" placeholder="输入标题或内容" value="{{keyword}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_view data-v-a87698b4 {{['search_btn', [searchShow ? 'on' : '']]}}"> {{searchShow?'搜索':'取消'}} </view>
+      </view>
+      <scroll-view class="_scroll-view data-v-a87698b4 search_content" scroll-y bindscrolltolower="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-a87698b4 search_ruselt" wx:if="{{resultShow}}">
+          <view class="_view data-v-a87698b4 search_success" wx:if="{{categoryData !=''}}">
+            <view class="_view data-v-a87698b4 search_text">为您找到以下跟 "
+              <text class="_text data-v-a87698b4 keyword">{{keyword}}</text>" 有关的内容</view>
+            <view class="_view data-v-a87698b4 search_success_content">
+              <view class="_view data-v-a87698b4 category_list">
+                <view class="_view data-v-a87698b4 category_item" wx:key="item.cid" key="{{item.cid}}" wx:for="{{categoryData}}" wx:for-index="index" wx:for-item="item">
+                  <view class="_view data-v-a87698b4 item_l">
+                    <view class="_view data-v-a87698b4 obox">
+                      <view class="_view data-v-a87698b4 item_title ellipsis">{{item.name}}</view>
+                      <view class="_view data-v-a87698b4 item_describe ellipsis">{{item.describe}}</view>
+                    </view>
+                    <view class="_view data-v-a87698b4 item_bz">
+                      <view class="_view data-v-a87698b4">
+                        <text class="_text data-v-a87698b4 Mcolor">￥{{item.money}}</text>
+                        <text class="_text data-v-a87698b4">￥{{item.oldmoney}}}</text>
+                      </view>
+                      <view class="_view data-v-a87698b4">
+                        <text class="_text data-v-a87698b4">{{item.count}}人已测</text>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="_view data-v-a87698b4 item_r">
+                    <image src="{{item.headimg}}" class="_image data-v-a87698b4 item_img" mode="aspectFill"></image>
+                    <text class="_text data-v-a87698b4 itype">{{item.type}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class="_view data-v-a87698b4 loadpromt">没有更多了</view>
+            </view>
+          </view>
+          <view class="_view data-v-a87698b4 search_fail" wx:else>
+            <view class="_view data-v-a87698b4 search_img">
+              <image src="../../static/images/null.png" class="_image data-v-a87698b4 search_icon" mode></image>
+            </view>
+            <view class="_view data-v-a87698b4 search_text">抱歉，没有找到 "
+              <text class="_text data-v-a87698b4 keyword">{{keyword}}</text>" 相关内容</view>
+          </view>
+        </view>
+        <view class="_view data-v-a87698b4 recom_wrap" hidden="{{!(categoryData =='')}}">
+          <view class="_view data-v-a87698b4 recom_title">推荐搜索</view>
+          <view class="_view data-v-a87698b4 recom_list">
+            <view class="_view data-v-a87698b4 recom_item">情商</view>
+            <view class="_view data-v-a87698b4 recom_item">心里健康</view>
+            <view class="_view data-v-a87698b4 recom_item">抑郁</view>
+            <view class="_view data-v-a87698b4 recom_item">性</view>
+            <view class="_view data-v-a87698b4 recom_item">童年阴影</view>
+            <view class="_view data-v-a87698b4 recom_item">内向</view>
+            <view class="_view data-v-a87698b4 recom_item">自卑</view>
+          </view>
+        </view>
+        <view class="_view data-v-a87698b4 hot_wrap" hidden="{{!(categoryData =='')}}">
+          <view class="_view data-v-a87698b4 hot_title">热门推荐</view>
+          <view class="_view data-v-a87698b4 hot_content">
+            <view class="_view data-v-a87698b4 category_list">
+              <view class="_view data-v-a87698b4 category_item" wx:key="item.cid" key="{{item.cid}}" wx:for="{{HotData}}" wx:for-index="index" wx:for-item="item">
+                <view class="_view data-v-a87698b4 item_l">
+                  <view class="_view data-v-a87698b4 obox">
+                    <view class="_view data-v-a87698b4 item_title ellipsis">{{item.name}}</view>
+                    <view class="_view data-v-a87698b4 item_describe ellipsis">{{item.describe}}</view>
+                  </view>
+                  <view class="_view data-v-a87698b4 item_bz">
+                    <view class="_view data-v-a87698b4">
+                      <text class="_text data-v-a87698b4 Mcolor">￥{{item.money}}</text>
+                      <text class="_text data-v-a87698b4">￥{{item.oldmoney}}}</text>
+                    </view>
+                    <view class="_view data-v-a87698b4">
+                      <text class="_text data-v-a87698b4">{{item.count}}人已测</text>
+                    </view>
+                  </view>
+                </view>
+                <view class="_view data-v-a87698b4 item_r">
+                  <image src="{{item.headimg}}" class="_image data-v-a87698b4 item_img" mode="aspectFill"></image>
+                  <text class="_text data-v-a87698b4 itype">{{item.type}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="_view data-v-a87698b4 loadpromt">没有更多了</view>
+          </view>
+        </view>
+        <view class="_view data-v-a87698b4 search_promt_wrap" hidden="{{!(searchShow && categoryData!='' && !resultShow)}}">
+          <view class="_view data-v-a87698b4 search_promt_list">
+            <view class="_view data-v-a87698b4 search_promt_item" bindtap="handleProxy" wx:key="item.cid" key="{{item.cid}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{categoryData}}" wx:for-index="index" wx:for-item="item">{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

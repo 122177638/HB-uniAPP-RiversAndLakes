@@ -1,0 +1,102 @@
+<template name="69c6ab80">
+  <view class="_view data-v-482229cc content">
+    <view class="_view data-v-482229cc banner_container">
+      <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" circular="{{true}}" class="_swiper data-v-482229cc">
+        <swiper-item class="_swiper-item data-v-482229cc">
+          <view class="_view data-v-482229cc swiper-item">
+            <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=786563959,3210136610&fm=27&gp=0.jpg" mode class="_image data-v-482229cc"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="_swiper-item data-v-482229cc">
+          <view class="_view data-v-482229cc swiper-item">
+            <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=958305351,793168181&fm=27&gp=0.jpg" mode class="_image data-v-482229cc"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="_swiper-item data-v-482229cc">
+          <view class="_view data-v-482229cc swiper-item">
+            <image src="http://img0.imgtn.bdimg.com/it/u=1690638720,3779370538&fm=27&gp=0.jpg" mode class="_image data-v-482229cc"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="_view data-v-482229cc search_dom">
+        <view class="_view data-v-482229cc search_l">
+          <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4264132728,3442146706&fm=27&gp=0.jpg" class="_image data-v-482229cc search_logo" mode></image>
+          <view class="_view data-v-482229cc search_name">壹心理测评</view>
+        </view>
+        <view class="_view data-v-482229cc search_r">
+          <image src="../../static/images/search.png" class="_image data-v-482229cc search_icon" mode></image>
+          <input type="text" class="_input data-v-482229cc search_ipt" bindfocus="handleProxy" value="" placeholder="搜索" data-eventid="{{'0'}}" data-comkey="{{$k}}" />
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-482229cc list_wrap">
+      <view class="_view data-v-482229cc list_top">
+        <view class="_view data-v-482229cc list_title hot">
+          <text class="_text data-v-482229cc">热卖</text>爆款</view>
+        <view class="_view data-v-482229cc list_describe">不容错过的精彩测评</view>
+      </view>
+      <view class="_view data-v-482229cc list_content">
+        <view class="_view data-v-482229cc list_item" wx:key="item.tid" key="{{item.tid}}" wx:for="{{hotData}}" wx:for-index="index" wx:for-item="item">
+          <view class="_view data-v-482229cc item_top">
+            <image src="{{item.timg}}" class="_image data-v-482229cc item_img" mode></image>
+            <view class="_view data-v-482229cc item_count">{{item.tcount}}人已测</view>
+          </view>
+          <view class="_view data-v-482229cc item_title">{{item.name}}</view>
+          <view class="_view data-v-482229cc item_money">￥{{item.money}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-482229cc list_wrap">
+      <view class="_view data-v-482229cc list_top">
+        <view class="_view data-v-482229cc list_title new">
+          <text class="_text data-v-482229cc">新品</text>首发</view>
+        <view class="_view data-v-482229cc list_describe">不容错过的精彩测评</view>
+      </view>
+      <view class="_view data-v-482229cc list_content">
+        <view class="_view data-v-482229cc list_item" wx:key="item.tid" key="{{item.tid}}" wx:for="{{hotData}}" wx:for-index="index" wx:for-item="item">
+          <view class="_view data-v-482229cc item_top">
+            <image src="{{item.timg}}" class="_image data-v-482229cc item_img" mode></image>
+            <view class="_view data-v-482229cc item_count">{{item.tcount}}人已测</view>
+          </view>
+          <view class="_view data-v-482229cc item_title">{{item.name}}</view>
+          <view class="_view data-v-482229cc item_money">￥{{item.money}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-482229cc test_wrap">
+      <view class="_view data-v-482229cc test_top">
+        <view class="_view data-v-482229cc test_title">精选测评</view>
+        <view class="_view data-v-482229cc test_more">更多</view>
+      </view>
+      <view class="_view data-v-482229cc test_content">
+        <view class="_view data-v-482229cc category_list">
+          <view class="_view data-v-482229cc category_item" wx:key="item.cid" key="{{item.cid}}" wx:for="{{categoryData}}" wx:for-index="index" wx:for-item="item">
+            <view class="_view data-v-482229cc item_l">
+              <view class="_view data-v-482229cc obox">
+                <view class="_view data-v-482229cc item_title ellipsis">{{item.name}}</view>
+                <view class="_view data-v-482229cc item_describe ellipsis">{{item.describe}}</view>
+              </view>
+              <view class="_view data-v-482229cc item_bz">
+                <view class="_view data-v-482229cc">
+                  <text class="_text data-v-482229cc Mcolor">￥{{item.money}}</text>
+                  <text class="_text data-v-482229cc">￥{{item.oldmoney}}}</text>
+                </view>
+                <view class="_view data-v-482229cc">
+                  <text class="_text data-v-482229cc">{{item.count}}人已测</text>
+                </view>
+              </view>
+            </view>
+            <view class="_view data-v-482229cc item_r">
+              <image src="{{item.headimg}}" class="_image data-v-482229cc item_img" mode="aspectFill"></image>
+              <text class="_text data-v-482229cc itype">{{item.type}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-482229cc footer_container">
+      <view class="_view data-v-482229cc navitoBtn" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">查看全部测评</view>
+      <view class="_view data-v-482229cc footer_txt">壹心理@提供内容及技术支持</view>
+    </view>
+  </view>
+</template>
